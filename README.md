@@ -48,7 +48,8 @@ $model->slugNotIn(['any-string', 'any-string']); // will return $query->whereNot
 
 This trait allows you to get all children of the model.
 
-> warning: It's only supports self-referencing models.
+> **Warning**
+> It's only supports self-referencing models.
 
 ```php
 
