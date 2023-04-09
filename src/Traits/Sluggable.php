@@ -12,6 +12,10 @@ trait Sluggable
         static::creating(function ($model) {
             $model->slug = $model->slug ?: Str::slug($model->title);
         });
+
+        static::updating(function ($model) {
+            $model->slug = $model->slug ?: Str::slug($model->title);
+        });
     }
 
     public function scopeSlug(mixed $query, string $slug): Builder
