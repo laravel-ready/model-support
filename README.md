@@ -24,6 +24,30 @@ composer require laravel-ready/model-support
 php artisan vendor:publish --tag=model-support-config
 ```
 
+## Example Trait Usage
+
+```php
+
+use LaravelReady\ModelSupport\Traits\Sluggable;
+use LaravelReady\ModelSupport\Traits\HasActive;
+...
+
+class Post extends Model
+{
+    use Sluggable, HasActive;
+
+    protected $fillable = [
+        'title',
+        'slug',
+        'content',
+        'is_active'
+    ];
+
+    ...
+}
+
+```
+
 ## 📝 Usage
 
 ### Sluggable
