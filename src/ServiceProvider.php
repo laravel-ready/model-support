@@ -1,9 +1,9 @@
 <?php
+
 namespace LaravelReady\ModelSupport;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-
 
 final class ServiceProvider extends BaseServiceProvider
 {
@@ -15,7 +15,7 @@ final class ServiceProvider extends BaseServiceProvider
     public function boot(Router $router): void
     {
         $this->bootPublishes();
-             }
+    }
 
     /**
      * Register any application services
@@ -37,6 +37,5 @@ final class ServiceProvider extends BaseServiceProvider
         $this->publishes([
             __DIR__ . '/../config/model-support.php' => $this->app->configPath('model-support.php'),
         ], 'model-support-config');
-     }
-
+    }
 }

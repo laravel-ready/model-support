@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace LaravelReady\ModelSupport\Traits;
 
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

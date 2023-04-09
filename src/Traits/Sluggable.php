@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace LaravelReady\ModelSupport\Traits;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Builder;
