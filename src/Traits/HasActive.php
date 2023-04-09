@@ -4,7 +4,6 @@ namespace LaravelReady\ModelSupport\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 
-
 trait HasActive
 {
     public function scopeStatus(mixed $query, bool $status): Builder
