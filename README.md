@@ -53,7 +53,7 @@ This trait allows you to get all children of the model.
 
 ```php
 
-use LaravelReady\ModelSupport\Traits\Sluggable;
+use LaravelReady\ModelSupport\Traits\ParentChild;
 ...
 
 $model->parent(); // will return parent model
@@ -70,7 +70,7 @@ This trait allows you to get active/inactive status models.
 
 ```php
 
-use LaravelReady\ModelSupport\Traits\Sluggable;
+use LaravelReady\ModelSupport\Traits\HasActive;
 ...
 
 $model->status(true|false); // will return $query->where('active', $status);
