@@ -8,7 +8,7 @@
 [![License][badge_license]][link_license]
 
 ## 📂 About
-Useful model support traits...
+Useful eloquent model support traits.
 
 ## 📦 Installation
 
@@ -22,6 +22,58 @@ composer require laravel-ready/model-support
 
 ```bash
 php artisan vendor:publish --tag=model-support-config
+```
+
+## 📝 Usage
+
+### Sluggable
+
+This trait allows you to generate a slug from a string. When you create a new model, the slug will be generated automatically. If you change the title, the slug will also be updated. See [bootSluggable()](src/Traits/Sluggable.php#L10) method for more details.
+
+```php
+
+use LaravelReady\ModelSupport\Traits\Sluggable;
+...
+
+$model->slug('any-string'); // will return $query->where('slug', $slug);
+$model->slugLike('any-string'); // will return $query->where('slug', 'like', $slug);
+$model->slugNot('any-string'); // will return $query->where('slug', '!=', $slug);
+$model->slugNotLike('any-string'); // will return $query->where('slug', 'not like', $slug);
+$model->slugIn(['any-string', 'any-string']); // will return $query->whereIn('slug', $slug);
+$model->slugNotIn(['any-string', 'any-string']); // will return $query->whereNotIn('slug', $slug);
+
+```
+
+### ParentChild
+
+This trait allows you to get all children of the model. It's only supports self-referencing models. 
+
+```php
+
+use LaravelReady\ModelSupport\Traits\Sluggable;
+...
+
+$model->parent(); // will return parent model
+$model->children(); // will return children models
+$model->allChildren(); // will return all children models
+$model->allChildrenIds(); // will return all children ids
+$model->recursiveParentAndChildren(); // will return all parent and children models
+
+```
+
+### HasActive
+
+This trait allows you to get active/inactive status models. 
+
+```php
+
+use LaravelReady\ModelSupport\Traits\Sluggable;
+...
+
+$model->status(true|false); // will return $query->where('active', $status);
+$model->active(); // will return $query->where('active', true);
+$model->inactive(); // will return $query->where('active', false);
+
 ```
 
 ## ⚓Credits
