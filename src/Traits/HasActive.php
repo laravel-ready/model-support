@@ -6,15 +6,13 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait HasActive
 {
-    public static function bootHasActive(): void
+    public function initializeHasActive(): void
     {
-        $model = new static;
-
         // append the is_active column to the fillable array
-        $model->fillable[] = 'is_active';
+        $this->fillable[] = 'is_active';
 
         // add the is_active column to the casts array
-        $model->casts['is_active'] = 'boolean';
+        $this->casts['is_active'] = 'boolean';
     }
 
     public function scopeStatus(mixed $query, bool $status): Builder
