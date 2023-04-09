@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait Sluggable
 {
-    public function bootSluggable()
+
+    public static function bootSluggable(): void
     {
         static::creating(function ($model) {
             $model->slug = $model->slug ?: Str::slug($model->title);
