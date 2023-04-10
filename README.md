@@ -109,9 +109,9 @@ This trait allows you to get active/inactive status models.
 use LaravelReady\ModelSupport\Traits\HasActive;
 ...
 
-$model->status(true|false); // will return $query->where('active', $status);
-$model->active(); // will return $query->where('active', true);
-$model->inactive(); // will return $query->where('active', false);
+$model->status(true|false); // will return $query->where('is_active', $status);
+$model->active(); // will return $query->where('is_active', true);
+$model->inactive(); // will return $query->where('is_active', false);
 
 ```
 
