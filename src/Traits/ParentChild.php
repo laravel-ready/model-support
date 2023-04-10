@@ -2,6 +2,7 @@
 
 namespace LaravelReady\ModelSupport\Traits;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
@@ -9,12 +10,12 @@ trait ParentChild
 {
     public function parent(): BelongsTo
     {
-        return $this->belongsTo(self::class, 'parent_id');
+        return $this->belongsTo(self::class, Config::get('has_active.parent_id', 'parent_id'));
     }
 
     public function children(): HasMany
     {
-        return $this->hasMany(self::class, 'parent_id');
+        return $this->hasMany(self::class, Config::get('has_active.parent_id', 'parent_id'));
     }
 
     public function recursiveParent(): mixed

@@ -55,6 +55,9 @@ class Post extends Model
 This trait allows you to generate a slug from a string. When you create a new model, the slug will be generated automatically. If you change the title, the slug will also be updated. See [bootSluggable()](src/Traits/Sluggable.php#L10) method for more details.
 
 > **Note**
+> Field name is `parent_id` by default. You can change it in the config file.
+
+> **Note**
 > Field names are `slug` and `title` by default. You can change it in the config file.
 
 ```php
