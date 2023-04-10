@@ -54,6 +54,9 @@ class Post extends Model
 
 This trait allows you to generate a slug from a string. When you create a new model, the slug will be generated automatically. If you change the title, the slug will also be updated. See [bootSluggable()](src/Traits/Sluggable.php#L10) method for more details.
 
+> **Note**
+> Field names are `slug` and `title` by default. You can change it in the config file.
+
 ```php
 
 use LaravelReady\ModelSupport\Traits\Sluggable;
@@ -91,6 +94,9 @@ $model->recursiveParentAndChildren(); // will return all parent and children mod
 ### HasActive
 
 This trait allows you to get active/inactive status models. 
+
+> **Warning**
+> This trait forces your models to fillable `is_active` field and adds `is_active` cast to `boolean`.
 
 ```php
 

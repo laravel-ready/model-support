@@ -2,7 +2,23 @@
 
 return [
     /**
-     * Add any config description here.
+     * The default Sluggable model support configuration.
      */
-    'any_config' => true
+    'sluggable_fields' => [
+        /**
+         * The default slug field name.
+         * 
+         * @var string
+         * Ddefault: 'slug'
+         */
+        'slug' => 'slug',
+
+        /**
+         * The default title field name.
+         * 
+         * @var string
+         * Ddefault: 'title'
+         */
+        'title' => 'title',
+    ],
 ];
