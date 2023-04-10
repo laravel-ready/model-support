@@ -75,6 +75,9 @@ $model->slugNotIn(['any-string', 'any-string']); // will return $query->whereNot
 
 This trait allows you to get all children of the model.
 
+> **Note**
+> Field names are `slug` and `title` by default. You can change it in the config file.
+
 > **Warning**
 > It's only supports self-referencing models.
 
