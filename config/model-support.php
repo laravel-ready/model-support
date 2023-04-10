@@ -21,4 +21,17 @@ return [
          */
         'title' => 'title',
     ],
+
+    /**
+     * HasActive model support configuration
+     */
+    'has_active' => [
+        /**
+         * The default is_active field name
+         * 
+         * @var string
+         * Ddefault: 'is_active'
+         */
+        'is_active' => 'is_active',
+    ],
 ];

@@ -75,9 +75,6 @@ $model->slugNotIn(['any-string', 'any-string']); // will return $query->whereNot
 
 This trait allows you to get all children of the model.
 
-> **Note**
-> Field names are `slug` and `title` by default. You can change it in the config file.
-
 > **Warning**
 > It's only supports self-referencing models.
 
@@ -97,6 +94,9 @@ $model->recursiveParentAndChildren(); // will return all parent and children mod
 ### HasActive
 
 This trait allows you to get active/inactive status models. 
+
+> **Note**
+> Field name is `is_active` by default. You can change it in the config file.
 
 > **Warning**
 > This trait forces your models to fillable `is_active` field and adds `is_active` cast to `boolean`.
