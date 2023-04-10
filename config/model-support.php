@@ -34,4 +34,17 @@ return [
          */
         'is_active' => 'is_active',
     ],
+
+    /**
+     * ParentChild model support configuration
+     */
+    'parent_child' => [
+        /**
+         * The default parent_id field name
+         * 
+         * @var string
+         * Ddefault: 'parent_id'
+         */
+        'parent_id' => 'parent_id',
+    ],
 ];
