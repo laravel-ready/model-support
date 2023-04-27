@@ -50,6 +50,25 @@ class Post extends Model
 
 ## 📝 Usage
 
+### HasLanguage
+
+This trait allows you to get models by language.
+
+> **Note**
+> Field name is `lang` by default. You can change it in the config file.
+
+```php
+
+use LaravelReady\ModelSupport\Traits\HasLanguage;
+...
+
+$model->lang('en'); // will return $query->where('lang', $lang);
+$model->langNot('en'); // will return $query->where('lang', '!=', $lang);
+$model->langIn(['en', 'tr']); // will return $query->whereIn('lang', $langs);
+$model->langNotIn(['en', 'tr']); // will return $query->whereNotIn('lang', $langs);
+
+```
+
 ### Sluggable
 
 This trait allows you to generate a slug from a string. When you create a new model, the slug will be generated automatically. If you change the title, the slug will also be updated. See [bootSluggable()](src/Traits/Sluggable.php#L10) method for more details.
