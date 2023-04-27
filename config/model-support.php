@@ -47,4 +47,17 @@ return [
          */
         'parent_id' => 'parent_id',
     ],
+
+    /**
+     * HasLanguage model support configuration
+     */
+    'has_language' => [
+        /**
+         * The default language field name
+         * 
+         * @var string
+         * Ddefault: 'lang'
+         */
+        'language_field' => 'lang',
+    ]
 ];
