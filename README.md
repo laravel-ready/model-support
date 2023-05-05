@@ -90,6 +90,26 @@ $model->slugNotIn(['any-string', 'any-string']); // will return $query->whereNot
 
 ```
 
+### SluggableTitle
+
+This trait allows you to generate a slug from a title field. Same as [Sluggable](#sluggable) trait but it only works with the title field.
+
+```php
+
+use LaravelReady\ModelSupport\Traits\SluggableTitle;
+...
+```
+
+### SluggableName
+
+This trait allows you to generate a slug from a name field. Same as [Sluggable](#sluggable) trait but it only works with the name field.
+
+```php
+
+use LaravelReady\ModelSupport\Traits\SluggableName;
+...
+```
+
 ### ParentChild
 
 This trait allows you to get all children of the model.
