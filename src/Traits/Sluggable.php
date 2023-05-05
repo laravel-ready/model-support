@@ -14,11 +14,11 @@ trait Sluggable
         $titleFieldName = Config::get('sluggable_fields.title', 'title');
 
         static::creating(function ($model) use ($slugFieldName, $titleFieldName) {
-            $model->slug = $model->$slugFieldName ?: Str::slug($model->$titleFieldName);
+            $model->$slugFieldName = Str::slug($model->$titleFieldName);
         });
 
         static::updating(function ($model) use ($slugFieldName, $titleFieldName) {
-            $model->slug = $model->$slugFieldName ?: Str::slug($model->$titleFieldName);
+            $model->$slugFieldName = Str::slug($model->$titleFieldName);
         });
     }
 
