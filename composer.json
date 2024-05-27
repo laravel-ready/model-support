@@ -1,75 +1,72 @@
 {
-    "name": "laravel-ready/model-support",
-    "description": "Useful model support traits",
-    "type": "library",
-    "license": "MIT",
-    "keywords": [
-        "model",
-        "trait",
-        "laravel",
-        "support",
-        "model support"
-    ],
-    "authors": [
-        {
-            "name": "Egoist",
-            "email": "epsilonelittr@gmail.com"
-        }
-    ],
-    "support": {
-        "issues": "https://github.com/laravel-ready/model-support/issues",
-        "source": "https://github.com/laravel-ready/model-support"
-    },
-    "require": {
-        "php": "^8.1",
-        "illuminate/support": "^10.0"
-    },
-    "require-dev": {
-        "mockery/mockery": "^1.5",
-        "orchestra/testbench": "^8.0",
-        "phpstan/phpstan": "^1.10",
-        "phpstan/phpstan-phpunit": "^1.3",
-        "phpstan/phpstan-deprecation-rules": "^1.1",
-        "phpstan/extension-installer": "^1.2",
-        "nunomaduro/larastan": "^2.5",
-        "pestphp/pest": "^1.22",
-        "pestphp/pest-plugin-laravel": "^1.4",
-        "pestphp/pest-plugin-parallel": "^1.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "LaravelReady\\ModelSupport\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests"
-        }
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
-    },
-    "scripts": {
-        "lint": "php-cs-fixer fix -v",
-        "test:coverage": "@test  --coverage-php ./coverage/cov/default.cov",
-        "test:coverage:html": "@test  --coverage-html coverage/html/default",
-        "test": "vendor/bin/pest --colors=always --parallel",
-        "test:lint": "php-cs-fixer fix -v --dry-run",
-        "test:styles": "vendor/bin/phpstan analyse --ansi",
-        "test:styles:pro": "vendor/bin/phpstan analyse --pro --fix --watch"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "LaravelReady\\ModelSupport\\ServiceProvider"
-            ]
-        }
-    },
-    "minimum-stability": "stable",
-    "prefer-stable": true
+  "name": "laravel-ready/model-support",
+  "description": "Useful model support traits",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "model",
+    "trait",
+    "laravel",
+    "support",
+    "model support"
+  ],
+  "authors": [
+    {
+      "name": "Egoist",
+      "email": "epsilonelittr@gmail.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/laravel-ready/model-support/issues",
+    "source": "https://github.com/laravel-ready/model-support"
+  },
+  "require": {
+    "php": "^8.2 || ^8.1",
+    "illuminate/support": "^11.8 || ^10.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.6.12",
+    "orchestra/testbench": "v9.1.0",
+    "phpstan/phpstan": "^1.11.2",
+    "phpstan/phpstan-phpunit": "^1.4.0",
+    "phpstan/phpstan-deprecation-rules": "^1.2.0",
+    "phpstan/extension-installer": "^1.3.1",
+    "nunomaduro/larastan": "^v2.9.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "LaravelReady\\ModelSupport\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "scripts": {
+    "lint": "php-cs-fixer fix -v",
+    "test:coverage": "@test  --coverage-php ./coverage/cov/default.cov",
+    "test:coverage:html": "@test  --coverage-html coverage/html/default",
+    "test": "vendor/bin/pest --colors=always --parallel",
+    "test:lint": "php-cs-fixer fix -v --dry-run",
+    "test:styles": "vendor/bin/phpstan analyse --ansi",
+    "test:styles:pro": "vendor/bin/phpstan analyse --pro --fix --watch"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "LaravelReady\\ModelSupport\\ServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
 }
