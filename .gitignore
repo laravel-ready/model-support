@@ -12,3 +12,4 @@ vendor/
 *.lock
 
 mix-manifest.json
+dist
