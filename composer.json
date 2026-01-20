@@ -54,13 +54,12 @@
     }
   },
   "scripts": {
-    "lint": "php-cs-fixer fix -v",
-    "test:coverage": "@test  --coverage-php ./coverage/cov/default.cov",
-    "test:coverage:html": "@test  --coverage-html coverage/html/default",
+    "lint": "vendor/bin/php-cs-fixer fix -v",
+    "lint:check": "vendor/bin/php-cs-fixer fix -v --dry-run",
+    "analyse": "vendor/bin/phpstan analyse --ansi --memory-limit=512M",
     "test": "vendor/bin/pest --colors=always --parallel",
-    "test:lint": "php-cs-fixer fix -v --dry-run",
-    "test:styles": "vendor/bin/phpstan analyse --ansi",
-    "test:styles:pro": "vendor/bin/phpstan analyse --pro --fix --watch"
+    "test:coverage": "@test --coverage-php ./coverage/cov/default.cov",
+    "test:coverage:html": "@test --coverage-html coverage/html/default"
   },
   "extra": {
     "laravel": {
